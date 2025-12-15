@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuôi Trường - Christmas Edition 🎄</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        xmasRed: '#D42426',
+                        xmasGreen: '#165B33',
+                        xmasGold: '#F8B229',
+                        xmasCream: '#FDFBF7',
+                    },
+                    fontFamily: {
+                        display: ['"Mountains of Christmas"', 'serif'],
+                        body: ['"Quicksand"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #FDFBF7;
+            overflow-x: hidden;
+        }
+        .snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to { transform: translateY(100vh); }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div id="snow-container" class="snow-container"></div>
+
+    <header class="relative bg-gradient-to-b from-xmasGreen to-[#0b301a] text-white pt-20 pb-32 text-center rounded-b-[50px] shadow-xl">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
+             <i class="fa-solid fa-snowflake absolute top-10 left-10 text-4xl"></i>
+            <i class="fa-solid fa-candy-cane absolute top-20 right-20 text-5xl"></i>
+            <i class="fa-solid fa-sleigh absolute bottom-10 left-1/4 text-6xl"></i>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-4">
+            <div class="inline-block bg-xmasRed px-4 py-1 rounded-full text-sm font-bold mb-4 animate-bounce border-2 border-xmasGold">
+                🎄 Dự án hài hước cuối năm 2025 🎄
+            </div>
+            <div class="inline-block bg-xmasRed px-4 py-1 rounded-full text-sm font-bold mb-4 animate-bounce border-2 border-xmasGold">
+                🎄 Chiến dịch Mùa Đông Không Lạnh 🎄
+            </div>
+            <h1 class="font-display text-6xl md:text-8xl mb-4 text-xmasGold text-shadow">
+                Nuôi Trường <i class="fa-solid fa-hat-santa text-xmasRed"></i>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 font-light max-w-2xl mx-auto">
+                "Giáng sinh này Trường vẫn một mình. Nếu bạn cũng thế thì hãy... nuôi Trường?"
+            </p>
+            <p class="text-xl md:text-2xl mb-8 font-light max-w-2xl mx-auto">
+                Trường không xin tiền. Trường chỉ mở ra cơ hội để bạn được làm người tốt. Mỗi ly trà sữa bạn tài trợ là một giọt nước mắt hạnh phúc của Trường. Hãy để Trường được sống, được ăn, được Netflix!
+            </p>
+            
+            <button class="bg-xmasRed hover:bg-red-700 text-white font-bold py-4 px-10 rounded-full shadow-lg transform transition hover:scale-105 border-b-4 border-red-900 text-lg">
+                <i class="fa-solid fa-gift mr-2"></i> Nhận nuôi ngay
+            </button>
+
+            <div class="flex justify-center gap-8 mt-12">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-xmasGold">1</div>
+                    <div class="text-sm opacity-80">Người nuôi (Mẹ)</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-xmasGold">0</div>
+                    <div class="text-sm opacity-80">Người yêu cũ</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-xmasGold">0đ</div>
+                    <div class="text-sm opacity-80">Phí hoàn trả</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="font-display text-5xl text-xmasGreen mb-4">Về Trường (Đã tiêm phòng)</h2>
+            <div class="w-24 h-1 bg-xmasRed mx-auto rounded"></div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="w-full md:w-1/2 relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-xmasRed to-xmasGold rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative rounded-2xl overflow-hidden border-4 border-white shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1512474932049-78ac69ede12c?q=80&w=2070&auto=format&fit=crop" alt="Ảnh minh họa Trường" class="w-full h-[400px] object-cover hover:scale-110 transition duration-500">
+                    <div class="absolute bottom-4 left-4 bg-white/90 px-4 py-2 rounded-lg text-xmasGreen font-bold">
+                        <i class="fa-solid fa-check-circle"></i> Ngoan, biết nghe lời
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 space-y-6 text-lg">
+                <p class="italic text-gray-600 border-l-4 border-xmasGold pl-4">
+                    "Trường là một cá thể độc lập, tự do, nhưng đôi khi hơi thiếu sự yêu thương (và tài chính) vào mùa đông."
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center"><i class="fa-solid fa-star text-xmasGold mr-3"></i> Ăn ít, dễ nuôi (chủ yếu ăn cơm bụi).</li>
+                    <li class="flex items-center"><i class="fa-solid fa-star text-xmasGold mr-3"></i> Biết chụp ảnh sống ảo cho bạn ngày Noel.</li>
+                    <li class="flex items-center"><i class="fa-solid fa-star text-xmasGold mr-3"></i> Không sủa bậy, biết chào hỏi người lớn.</li>
+                    <li class="flex items-center"><i class="fa-solid fa-star text-xmasGold mr-3"></i> Cam kết trung thành nếu được cho trà sữa.</li>
+                </ul>
+                <p class="italic text-gray-600 border-l-4 border-xmasGold pl-4">
+                    "Nuôi một con mèo có thể tốn 500/tháng. Nuôi Trường cũng thế, nhưng Trường biết nói cảm ơn!"
+                </p>
+                <div class="bg-red-50 p-4 rounded-lg border border-red-200 text-xmasRed text-sm">
+                    <i class="fa-solid fa-triangle-exclamation"></i> <strong>Lưu ý:</strong> Sản phẩm không được bảo hành, nhận rồi miễn trả lại.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-green-50 relative overflow-hidden">
+        <img src="https://cdn-icons-png.flaticon.com/512/3767/3767084.png" class="absolute top-10 right-10 w-24 opacity-20 rotate-12" alt="decoration">
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-5xl text-xmasGreen">Gói Quà Giáng Sinh</h2>
+                <p class="mt-4 text-gray-600">Hãy chọn gói phù hợp để Trường có một mùa đông ấm áp</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card rounded-3xl p-8 hover:shadow-2xl transition transform hover:-translate-y-2 text-center border-t-8 border-gray-400">
+                    <div class="text-4xl mb-4">🧋</div>
+                    <h3 class="text-2xl font-bold mb-2">Gói Trà Sữa</h3>
+                    <div class="text-4xl font-black text-gray-700 my-4">99.999đ</div>
+                    <p class="text-sm text-gray-500 mb-6">Size L, Full topping, 70% đường và 100% tình cảm.</p>
+                    <button class="w-full py-3 rounded-xl border-2 border-gray-700 font-bold hover:bg-gray-700 hover:text-white transition">
+                      Mời ly này
+                    </button>
+                    <ul class="text-left mt-6 space-y-2 text-sm">
+                        <li><i class="fa-solid fa-check text-green-500"></i> Trường sẽ hết "cọc" ngay lập tức.</li>
+                        <li><i class="fa-solid fa-check text-green-500"></i> Post story cảm ơn có gắn nhạc chill.</li>
+                     </ul>
+                </div>
+
+                <div class="bg-gradient-to-b from-xmasRed to-red-800 text-white rounded-3xl p-8 shadow-2xl transform scale-105 border-4 border-xmasGold relative">
+                    <div class="absolute top-0 right-0 bg-xmasGold text-red-900 text-xs font-bold px-3 py-1 rounded-bl-xl uppercase">Best Choice</div>
+                    <div class="text-4xl mb-4">🎅</div>
+                    <h3 class="text-2xl font-bold mb-2">Gói Ông Già Noel</h3>
+                    <div class="text-4xl font-black text-xmasGold my-4">999.999đ</div>
+                    <p class="text-sm text-gray-200 mb-6">Đủ để Trường đi ăn đồ nướng Noel.</p>
+                    <button class="w-full py-3 rounded-xl bg-xmasGold text-red-900 font-bold hover:bg-white transition shadow-lg">Nuôi Gói Này</button>
+                    <ul class="text-left mt-6 space-y-2 text-sm">
+                        <li><i class="fa-solid fa-check text-xmasGold"></i> Được Trường chúc ngủ ngon 1 tuần (hoặc không).</li>
+                        <li><i class="fa-solid fa-check text-xmasGold"></i> Set avatar đôi (nếu muốn).</li>
+                        <li><i class="fa-solid fa-check text-xmasGold"></i> Đi chơi đêm Noel (bạn trả tiền).</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card rounded-3xl p-8 hover:shadow-2xl transition transform hover:-translate-y-2 text-center border-t-8 border-xmasGreen">
+                    <div class="text-4xl mb-4">💎</div>
+                    <h3 class="text-2xl font-bold mb-2">Gói Sugar Daddy</h3>
+                    <div class="text-4xl font-black text-xmasGreen my-4">9.999.999đ</div>
+                    <p class="text-sm text-gray-500 mb-6">Trường sẽ thuộc về bạn (trong tư tưởng).</p>
+                    <button class="w-full py-3 rounded-xl border-2 border-xmasGreen text-xmasGreen font-bold hover:bg-xmasGreen hover:text-white transition">Chốt đơn</button>
+                    <ul class="text-left mt-6 space-y-2 text-sm">
+                        <li><i class="fa-solid fa-check text-green-500"></i> Full quyền lợi các gói trên.</li>
+                        <li><i class="fa-solid fa-check text-green-500"></i> Trường làm bài tập hộ (nếu biết làm).</li>
+                        <li><i class="fa-solid fa-check text-green-500"></i> Hát tặng 1 bài (không hay).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="py-20 container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="font-display text-5xl text-xmasGreen mb-4">Tiền Của Bạn Sẽ Đi Đâu ???</h2>
+                <p class="text-gray-600 text-lg">Trường công khai 100% lỗ hổng tài chính. Không giấu giếm, chỉ có "nghèo" thật!</p>
+            </div>
+
+            <div class="bg-red-50 border-l-4 border-xmasRed p-6 rounded-r-xl mb-8 shadow-sm flex items-start gap-4">
+                <div class="text-3xl text-xmasRed animate-bounce">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xmasRed text-lg mb-1">Lưu ý quan trọng từ Bắc Cực:</h4>
+                    <p class="text-gray-700 text-sm md:text-base">
+                        Đây là chi phí tối thiểu để Trường tồn tại qua mùa đông khắc nghiệt. Nếu muốn Trường sống vui vẻ, hồng hào và bớt than vãn, vui lòng <span class="font-bold text-xmasGreen">nhân đôi</span> số tiền donate. Cảm ơn sự thấu hiểu của quý nhà hảo tâm!
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+                <div class="bg-xmasGreen p-5 text-white flex justify-between items-center">
+                    <h3 class="font-bold text-lg md:text-xl"><i class="fa-solid fa-list-check mr-2"></i> Chi tiết "nhu cầu thiết yếu" hàng tháng</h3>
+                    <i class="fa-solid fa-snowflake opacity-50 text-2xl"></i>
+                </div>
+
+                <div class="divide-y divide-gray-100">
+                    <div class="p-6 flex items-center justify-between hover:bg-red-50 transition duration-300">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-xl">
+                                <i class="fa-solid fa-bowl-food"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-800">Vào bụng Trường</div>
+                                <div class="text-xs text-gray-500">Vì không ăn thì đói</div>
+                            </div>
+                        </div>
+                        <div class="font-bold text-xmasRed text-lg">2.000.000đ</div>
+                    </div>
+
+                    <div class="p-6 flex items-center justify-between hover:bg-red-50 transition duration-300">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-700 text-xl">
+                                <i class="fa-solid fa-mug-hot"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-800">Trà sữa</div>
+                                <div class="text-xs text-gray-500">Nhu cầu cấp thiết để sưởi ấm tâm hồn</div>
+                            </div>
+                        </div>
+                        <div class="font-bold text-xmasRed text-lg">1.000.000đ</div>
+                    </div>
+
+                    <div class="p-6 flex items-center justify-between hover:bg-red-50 transition duration-300">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-xmasRed text-xl">
+                                <i class="fa-brands fa-phone-slash"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-800">Netflix & Spotify</div>
+                                <div class="text-xs text-gray-500">Để nghe nhạc buồn và xem phim Hàn khóc</div>
+                            </div>
+                        </div>
+                        <div class="font-bold text-xmasRed text-lg">500.000đ</div>
+                    </div>
+                     <div class="p-6 flex items-center justify-between hover:bg-red-50 transition duration-300">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-xmasGreen text-xl">
+                                <i class="fa-solid fa-user-secret" ></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-800">Làm tóc</div>
+                                <div class="text-xs text-gray-500">để đẹp trai xin tiền dễ hơn</div>
+                            </div>
+                        </div>
+                        <div class="font-bold text-xmasRed text-lg">500.000đ</div>
+                    </div>
+                     <div class="p-6 flex items-center justify-between hover:bg-red-50 transition duration-300">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-xmasGreen text-xl">
+                                <i class="fa-solid fa-shirt"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-800">Outfit đi chơi Noel</div>
+                                <div class="text-xs text-gray-500">Không có quần áo mới người yêu cũ sẽ cười</div>
+                            </div>
+                        </div>
+                        <div class="font-bold text-xmasRed text-lg">1.000.000đ</div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 flex justify-between items-center border-t border-gray-200">
+                    <div class="font-bold text-gray-600 uppercase tracking-wider">Tổng thiệt hại:</div>
+                    <div class="text-3xl font-black text-xmasGreen">5.000.000đ</div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-6 text-sm italic text-gray-500">
+                * Số liệu được kiểm toán bởi lương tâm của Trường.
+            </div>
+        </div>
+    </section>
+    <section class="py-20 container bg-green-50 mx-auto px-4">
+        <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+            <div class="bg-xmasGreen p-6 text-center">
+                <h3 class="text-white font-bold text-xl uppercase tracking-wider">Danh Sách Bé Ngoan (Donate)</h3>
+                <p class="text-green-200 text-sm">Cập nhật theo thời gian thực (chắc thế)</p>
+            </div>
+            <div class="p-6">
+                <div class="flex items-center justify-between py-4 border-b border-gray-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-xmasRed"><i class="fa-solid fa-user-secret"></i></div>
+                        <div>
+                            <div class="font-bold">Người giấu tên</div>
+                            <div class="text-xs text-gray-500">Vừa xong</div>
+                        </div>
+                    </div>
+                    <div class="text-xmasGreen font-bold">+ 50.000đ</div>
+                </div>
+                <div class="flex items-center justify-between py-4 border-b border-gray-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600"><i class="fa-brands fa-facebook"></i></div>
+                        <div>
+                            <div class="font-bold">Hội người yêu cũ</div>
+                            <div class="text-xs text-gray-500">1 giờ trước</div>
+                        </div>
+                    </div>
+                    <div class="text-xmasGreen font-bold">+ 20.000đ</div>
+                </div>
+                 <div class="flex items-center justify-between py-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600"><i class="fa-solid fa-heart"></i></div>
+                        <div>
+                            <div class="font-bold">Người qua đường</div>
+                            <div class="text-xs text-gray-500">Hôm qua</div>
+                        </div>
+                    </div>
+                    <div class="text-xmasGreen font-bold">+ 500.000đ</div>
+                </div>
+                
+                <button class="w-full bg-gray-100 py-3 rounded-lg text-sm text-gray-600 font-bold mt-4 hover:bg-gray-200">
+                    Xem toàn bộ lịch sử
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-xmasRed text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-display text-4xl mb-12 text-xmasGold">Nhà Hảo Tâm Nói Gì?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-red-800 p-6 rounded-xl border border-red-600 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-red-900 absolute top-4 left-4 opacity-50"></i>
+                    <p class="mb-4 italic">"Nuôi Trường rất vui, em ấy ăn rất khỏe. Tôi đã tốn 2 tháng lương nhưng thấy hạnh phúc."</p>
+                    <div class="font-bold text-xmasGold">- Một nạn nhân giấu tên</div>
+                </div>
+                <div class="bg-red-800 p-6 rounded-xl border border-red-600 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-red-900 absolute top-4 left-4 opacity-50"></i>
+                    <p class="mb-4 italic">"Trường chụp ảnh đẹp lắm, mỗi tội hay đòi đi uống Starbucks. 9/10 điểm."</p>
+                    <div class="font-bold text-xmasGold">- Bạn thân (Friendzone)</div>
+                </div>
+                <div class="bg-red-800 p-6 rounded-xl border border-red-600 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-red-900 absolute top-4 left-4 opacity-50"></i>
+                    <p class="mb-4 italic">"Giá như Trường bớt nói lại thì sẽ hoàn hảo. Nhưng dù sao cũng ủng hộ gói 99k."</p>
+                    <div class="font-bold text-xmasGold">- bạn cùng phòng</div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="py-20 bg-xmasCream relative">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-5xl text-xmasGreen mb-2">Hỏi Đáp (FAQ)</h2>
+                <p class="text-gray-600">Những câu hỏi mà Trường tự nghĩ ra rồi trả lời để trông có vẻ chuyên nghiệp</p>
+                <i class="fa-solid fa-gift text-3xl text-xmasRed mt-4 animate-bounce"></i>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl shadow-md overflow-hidden border border-green-100 open:ring-2 open:ring-xmasGreen transition-all">
+                    <summary class="flex justify-between items-center cursor-pointer p-6 bg-white hover:bg-green-50 transition">
+                        <h3 class="font-bold text-lg text-xmasGreen flex items-center">
+                            <i class="fa-solid fa-circle-question mr-3 text-xmasRed"></i>
+                            Tại sao tôi phải nuôi Trường
+                        </h3>
+                        <span class="text-xmasRed transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 text-gray-700 bg-white border-t border-dashed border-gray-200 mt-4">
+                        Bạn không phải. Nhưng nghĩ mà xem, bạn đang nuôi Netflix, nuôi Grab, nuôi Shopee... Sao không thử nuôi một con người biết cảm ơn? Trường hứa sẽ reaction tất cả story trên mọi nền tảng của bạn!
+                    </div>
+                </details>
+                <details class="group bg-white rounded-xl shadow-md overflow-hidden border border-green-100 open:ring-2 open:ring-xmasGreen transition-all">
+                    <summary class="flex justify-between items-center cursor-pointer p-6 bg-white hover:bg-green-50 transition">
+                        <h3 class="font-bold text-lg text-xmasGreen flex items-center">
+                            <i class="fa-solid fa-circle-question mr-3 text-xmasRed"></i>
+                            Nuôi Trường có tốn kém không?
+                        </h3>
+                        <span class="text-xmasRed transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 text-gray-700 bg-white border-t border-dashed border-gray-200 mt-4">
+                        Thực ra là <strong>KHÔNG</strong>... nếu bạn không cho ăn. Còn nếu muốn Trường béo tốt, hồng hào để dẫn đi chơi Noel thì "tùy tâm" (tối thiểu 50k/bữa). Trường cam kết ăn hết không bỏ mứa.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl shadow-md overflow-hidden border border-green-100 open:ring-2 open:ring-xmasGreen transition-all">
+                    <summary class="flex justify-between items-center cursor-pointer p-6 bg-white hover:bg-green-50 transition">
+                        <h3 class="font-bold text-lg text-xmasGreen flex items-center">
+                            <i class="fa-solid fa-circle-question mr-3 text-xmasRed"></i>
+                            Trường có người yêu chưa?
+                        </h3>
+                        <span class="text-xmasRed transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 text-gray-700 bg-white border-t border-dashed border-gray-200 mt-4">
+                        Câu hỏi hay! Hiện tại Trường đang trong mối quan hệ phức tạp với... cái ví rỗng. Nếu bạn donate gói <strong>"Sugar Daddy"</strong>, tình trạng này có thể thay đổi ngay lập tức.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl shadow-md overflow-hidden border border-green-100 open:ring-2 open:ring-xmasGreen transition-all">
+                    <summary class="flex justify-between items-center cursor-pointer p-6 bg-white hover:bg-green-50 transition">
+                        <h3 class="font-bold text-lg text-xmasGreen flex items-center">
+                            <i class="fa-solid fa-circle-question mr-3 text-xmasRed"></i>
+                            Chuyển khoản nhầm có được hoàn lại không?
+                        </h3>
+                        <span class="text-xmasRed transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 text-gray-700 bg-white border-t border-dashed border-gray-200 mt-4">
+                        Dạ <strong>KHÔNG</strong> ạ. Quy tắc của ông già Noel là "Quà đã tặng miễn đòi lại". Tiền vào túi Trường sẽ tự động chuyển hóa thành trà sữa và đồ ăn vặt. Xin cảm ơn.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl shadow-md overflow-hidden border border-green-100 open:ring-2 open:ring-xmasGreen transition-all">
+                    <summary class="flex justify-between items-center cursor-pointer p-6 bg-white hover:bg-green-50 transition">
+                        <h3 class="font-bold text-lg text-xmasGreen flex items-center">
+                            <i class="fa-solid fa-circle-question mr-3 text-xmasRed"></i>
+                            Tại sao tôi nên nuôi Trường thay vì nuôi mèo?
+                        </h3>
+                        <span class="text-xmasRed transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 text-gray-700 bg-white border-t border-dashed border-gray-200 mt-4">
+                        Mèo kêu "Meow" nhưng không biết rửa bát. Trường kêu "Đói quá" nhưng biết rửa bát, biết lái xe, biết chụp ảnh và biết hát (dù hơi phô). Sự lựa chọn là ở bạn!
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+<footer class="bg-[#052e16] text-gray-300 pt-16 pb-8 border-t-4 border-xmasGold">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                
+                <div class="lg:col-span-2 pr-4">
+                    <h3 class="text-2xl font-display font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-star text-xmasGold animate-pulse"></i> Nuôi Trường
+                    </h3>
+                    <p class="text-sm mb-6 leading-relaxed opacity-80">
+                        Dự án phi lợi nhuận (cho bạn). 100% lợi nhuận thuộc về Trường. Cảm ơn bạn đã đọc đến đây (và hy vọng bạn đã chuyển khoản).
+                    </p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-3 hover:text-xmasGold transition">
+                            <i class="fa-regular fa-envelope text-xmasRed"></i>
+                            <span>nuoitruong2025@gmail.com</span>
+                        </li>
+                        <li class="flex items-center gap-3 hover:text-xmasGold transition">
+                            <i class="fa-solid fa-phone-slash text-xmasRed"></i>
+                            <span>Trường không nghe máy</span>
+                        </li>
+                        <li class="flex items-center gap-3 hover:text-xmasGold transition">
+                            <i class="fa-solid fa-location-dot text-xmasRed"></i>
+                            <span>Đâu đó gần Bắc Cực</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xmasGold font-bold mb-4 uppercase text-sm tracking-wider">Về Trường</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Câu chuyện Trường</a></li>
+                        <li><a href="#" class="hover:text-white transition">Tại sao nuôi Trường?</a></li>
+                        <li><a href="#" class="hover:text-white transition">Trường làm gì cả ngày?</a></li>
+                        <li><a href="#" class="hover:text-white transition">Ảnh Trường cute</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xmasGold font-bold mb-4 uppercase text-sm tracking-wider">Ủng hộ</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Các gói nuôi</a></li>
+                        <li><a href="#" class="hover:text-white transition">Cách chuyển tiền</a></li>
+                        <li><a href="#" class="hover:text-white transition">Quyền lợi VIP</a></li>
+                        <li><a href="#" class="hover:text-white transition decoration-line-through decoration-red-500">Hoàn tiền (đừng mơ)</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xmasGold font-bold mb-4 uppercase text-sm tracking-wider">Kết nối</h4>
+                    <ul class="space-y-3 text-sm mb-8">
+                        <li><a href="#" class="hover:text-white transition">Facebook</a></li>
+                        <li><a href="#" class="hover:text-white transition">Instagram</a></li>
+                        <li><a href="#" class="hover:text-white transition">TikTok</a></li>
+                        <li><a href="#" class="hover:text-white transition">Zalo (ib cho Trường)</a></li>
+                    </ul>
+                    
+                    <h4 class="text-xmasGold font-bold mb-4 uppercase text-sm tracking-wider">Pháp lý</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Chính sách (không có)</a></li>
+                        <li><a href="#" class="hover:text-white transition">Điều khoản (Trường đúng)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-green-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs opacity-60">
+                <div class="mb-4 md:mb-0">
+                    &copy; 2025 Nuôi Trường. Mọi quyền thuộc về Trường.
+                </div>
+                <div class="italic">
+                    Made with <span class="text-red-500">nghèo</span> và <span class="text-yellow-500">hy vọng</span> by Trường
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function createSnowflake() {
+            const snowContainer = document.getElementById('snow-container');
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            
+            // Random icon tuyết hoặc chấm tròn
+            const icons = ['❄', '❅', '❆', '•'];
+            snowflake.innerText = icons[Math.floor(Math.random() * icons.length)];
+            
+            // Random vị trí và kích thước
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+            
+            // Random thời gian rơi
+            const duration = Math.random() * 3 + 2;
+            snowflake.style.animationDuration = duration + 's';
+            
+            snowContainer.appendChild(snowflake);
+            
+            // Xóa tuyết sau khi rơi xong
+            setTimeout(() => {
+                snowflake.remove();
+            }, duration * 1000);
+        }
+
+        // Tạo tuyết liên tục
+        setInterval(createSnowflake, 100);
+    </script>
+</body>
+</html>
